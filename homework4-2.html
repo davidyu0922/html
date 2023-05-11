@@ -1,0 +1,51 @@
+<html>
+<script>
+    function persontax1(){
+    
+    var income1 = document.getElementById("Text_NetIncome1").value;
+    var tax1 = income1*0.05;
+    document.getElementById("result1").innerHTML = tax1;
+        
+    }
+
+    function persontax2(){
+    
+    var income2 = document.getElementById("Text_NetIncome2").value;
+    var tax2 = income2*0.05;
+    
+    document.getElementById("result2").innerHTML = tax2; 
+    
+    }
+
+    function persontax3(){
+        
+    var income1 = document.getElementById("Text_NetIncome1").value;
+    var income2 = document.getElementById("Text_NetIncome2").value;
+    var tax1 = income1*0.05;
+    var tax2 = income2*0.05;
+    var tax3 = tax1+tax2;
+    
+    document.getElementById("result3").innerHTML = tax3;
+
+    }
+
+</script>
+<body>
+<p>
+銷項總額:<input type="text" id="Text_NetIncome1"><br>
+<button type="button" onclick="persontax1()">計算</button>
+銷售稅額 = <span id="result1"></span>
+</p>
+<p>
+進項總額:<input type="text" id="Text_NetIncome2"><br>
+<button type="button" onclick="persontax2()">計算</button>
+進項稅額 = <span id="result2"></span>
+</p>
+<p>
+<br>
+<button type="button" onclick="persontax3()">計算</button>
+進項稅額 = <span id="result3"></span><br>
+</p>
+</body>
+
+</html>

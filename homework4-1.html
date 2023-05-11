@@ -1,0 +1,32 @@
+<html>
+<script>
+function persontax(){
+    var income = document.getElementById("Text_NetIncome").value;
+    
+    if (income < 9){
+        tax = "數字要大於8";
+    }else if (income >  8 & income < 17){
+        tax = "藍燈";
+    }else if (income > 16 & income < 23){
+        tax ="黃藍燈";
+    }else if (income > 22 & income < 32){
+        tax = "綠燈";
+    }else if (income > 31 & income < 38){
+        tax = "黃紅燈";
+    }else if (income > 37 & income < 46){
+        tax = "紅燈";
+    }else if (income >46){
+        tax = "數字要小於 46"
+    }
+    document.getElementById("result").innerHTML = tax;
+}
+</script>
+<body>
+<fieldset><legend>輸入景氣分數:</legend>
+
+<input type="text" id="Text_NetIncome" ><br>
+</fieldset>
+<br><button type="button" onclick="persontax()">計算</button>
+<p>景氣顏色 = <span id = "result"></span></p>
+</body>
+</html>
